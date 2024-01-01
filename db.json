@@ -1,0 +1,34 @@
+{
+  "notes": [
+    {
+      "id": "1",
+      "title": "Note 1",
+      "content": "This is the content of Note 1",
+      "important": false
+    },
+    {
+      "id": "2",
+      "title": "Note 2",
+      "content": "This is the content of Note 2",
+      "important": "false"
+    },
+    {
+      "id": 3,
+      "title": "aaa",
+      "content": "",
+      "important": false
+    },
+    {
+      "id": 4,
+      "title": "dd",
+      "content": "",
+      "important": true
+    },
+    {
+      "id": 5,
+      "title": "aa",
+      "content": "",
+      "important": false
+    }
+  ]
+}
