@@ -45,6 +45,17 @@ const App = () => {
       });
   };
 
+  const deleteNote = (id) => {
+    try {
+      setNotes((prevNote) => prevNote.filter((note) => note.id !== id));
+
+      const url = `http://localhost:3001/notes/${id}`;
+      axios.delete(url).catch((err) => console.log(err));
+    } catch (error) {
+      console.log("Error deleting note", error);
+    }
+  };
+
   return (
     <div>
       <form onSubmit={addNote}>
@@ -57,6 +68,7 @@ const App = () => {
           key={note.id}
           note={note}
           toggleImportance={() => toggleImportanceOf(note.id)}
+          deleteNote={() => deleteNote(note.id)}
         />
       ))}
     </div>

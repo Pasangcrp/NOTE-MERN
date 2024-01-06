@@ -1,4 +1,4 @@
-const Note = ({ note, toggleImportance }) => {
+const Note = ({ note, toggleImportance, deleteNote }) => {
   const label = note.important ? "make not important" : "make important";
 
   // Destructure the 'note' prop
@@ -8,6 +8,7 @@ const Note = ({ note, toggleImportance }) => {
       <p>{note.content}</p>
 
       <button onClick={toggleImportance}>{label}</button>
+      <button onClick={deleteNote}>Delete</button>
     </div>
   );
 };
